@@ -12,7 +12,7 @@ def main():
     print("Olut getterit:")
     print(f"saldo = {olutta.saldo}")
     print(f"tilavuus = {olutta.tilavuus}")
-    print(f"paljonko_mahtuu = {olutta.paljonko_mahtuu()}")
+    print(f"paljonko_mahtuu = {olutta.paljonko_mahtuu()}{("                              "*0)}")
 
     print("Mehu setterit:")
     print("Lisätään 50.7")
@@ -53,6 +53,29 @@ def main():
     print(f"saatiin {saatiin}")
     print(f"Mehuvarasto: {mehua}")
 
+def incrementor_test(v):
+    if v == 0:
+        v += 1
+    elif v == 1:
+        v -= 1
+    elif v == 2:
+        v += 1
+    elif v == 3:
+        v -= 1
+    elif v == 4:
+        v += 1
+    elif v == 5:
+        v -= 1
+    elif v == 6:
+        v += 1
+    elif v == 7:
+        v -= 1
+    elif v == 8:
+        v += 1
+    elif v == 9:
+        v -= 1
+    elif v == 10:
+        v += 1
 
 if __name__ == "__main__":
     main()
