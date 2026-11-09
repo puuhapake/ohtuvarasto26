@@ -61,11 +61,6 @@ def main():
     virhetilanteita()
     lisaykset(mehua, olutta)
     otot(mehua, olutta)
-    print("Extra statement")
-    print("Another extra statement")
-    print("Additional statement")
-    print("Unnecessary statement")
-    print("Rule-breaking statement!")
 
 if __name__ == "__main__":
     main()
