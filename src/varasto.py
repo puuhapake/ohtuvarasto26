@@ -1,10 +1,8 @@
 class Varasto:
     def __init__(self, tilavuus, alku_saldo = 0):
+        self.tilavuus = 0.0
         if tilavuus > 0.0:
             self.tilavuus = tilavuus
-        else:
-            # virheellinen, nollataan
-            self.tilavuus = 0.0
 
         if alku_saldo < 0.0:
             # virheellinen, nollataan
@@ -16,7 +14,8 @@ class Varasto:
             # täyteen ja ylimäärä hukkaan!
             self.saldo = tilavuus
 
-    # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms.
+    # huom: ominaisuus voidaan myös laskea.
+    # Ei tarvita erillistä kenttää viela_tilaa tms.
     def paljonko_mahtuu(self):
         return self.tilavuus - self.saldo
 
@@ -43,12 +42,3 @@ class Varasto:
 
     def __str__(self):
         return f"saldo = {self.saldo}, vielä tilaa {self.paljonko_mahtuu()}"
-
-def tyhjenna_kaikki(varastot):
-    for varasto in varastot:
-        if varasto is not None:
-            while varasto.saldo > 0:
-                varasto.ota_varastosta(1.0)
-
-def hajonnut_sisennys():
-     return 2
